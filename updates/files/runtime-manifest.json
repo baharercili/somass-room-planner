@@ -2,10 +2,10 @@
   "format": "somass-room-pages-runtime-v1",
   "publicPrefix": "/somass-room-planner/",
   "sourceTreeSHA256": "e293e30df2e8df696408ef63f188e4a5676893b8acc34fd6f3b01e8110f6aa67",
-  "exportTreeSHA256ExcludingManifest": "8f68706df727a5161b9f5c8b873de34264108dd3a06fe6e9e9ea8c28b2e0e0b9",
-  "filesExcludingManifest": 1264,
-  "geometryOrTextureContentChanged": false,
-  "productGeometryOrTextureContentChanged": false,
+  "exportTreeSHA256ExcludingManifest": "0f3cbc97bd624883c1e403dd10f4bbf8a7c0ec272883cd779e48fe2e09992dd8",
+  "filesExcludingManifest": 1277,
+  "geometryOrTextureContentChanged": true,
+  "productGeometryOrTextureContentChanged": true,
   "exportOnlyChanges": [
     "runtime-url-base",
     "exclude-removed-client-room-presets"
@@ -29,7 +29,10 @@
   "binaryIntegrity": {
     "files": 1237,
     "bytes": 614143384,
-    "allByteExact": true
+    "allByteExact": true,
+    "allOriginalBaselineBinaryFilesUnchanged": true,
+    "preservedBaselineBinaryFiles": 1237,
+    "scope": "All pre-existing frozen binary files; new derived page files inventoried separately"
   },
   "urlAdaptation": {
     "allowlistedRoots": [
@@ -107,7 +110,7 @@
   },
   "verification": {
     "pass": true,
-    "localReferenceOccurrences": 2626,
+    "localReferenceOccurrences": 2639,
     "missingReferences": [],
     "crossRootRuntimeReferences": [],
     "redirects": [
@@ -4882,9 +4885,7 @@
     {
       "path": "assets/js-0004fe01c61e4c9ed114c030de362f131bef1e0ec857bf43b6203a738c630b07.js",
       "bytes": 48780,
-      "sha256": "0004fe01c61e4c9ed114c030de362f131bef1e0ec857bf43b6203a738c630b07",
-      "sourcePath": "assets/js-d41eda704f4326c5e3bcf38c0a18a085ff4073a1f6b62746e45c9acf7daa6277.js",
-      "sourceSHA256": "d41eda704f4326c5e3bcf38c0a18a085ff4073a1f6b62746e45c9acf7daa6277"
+      "sha256": "0004fe01c61e4c9ed114c030de362f131bef1e0ec857bf43b6203a738c630b07"
     },
     {
       "path": "assets/js-02bb4ade710f3e607329e37a21f098bc3ac70eb6e33daf8a65e79f4db785e7b2.js",
@@ -4894,9 +4895,7 @@
     {
       "path": "assets/js-1c6ef24b307aa998a225fc82366330240c852fb8bc670b4b98eefaaa64e6d83c.js",
       "bytes": 36297660,
-      "sha256": "1c6ef24b307aa998a225fc82366330240c852fb8bc670b4b98eefaaa64e6d83c",
-      "sourcePath": "assets/js-ed2e0af9d9769516a88379ee45eb4ed80fc50dad9392a1f5ce4f64059c3a8d72.js",
-      "sourceSHA256": "ed2e0af9d9769516a88379ee45eb4ed80fc50dad9392a1f5ce4f64059c3a8d72"
+      "sha256": "1c6ef24b307aa998a225fc82366330240c852fb8bc670b4b98eefaaa64e6d83c"
     },
     {
       "path": "assets/js-5572cc7efced5297dbe9441804e1387a9051b5cbcb8baabf20b0a68d83b9a8a5.js",
@@ -4911,9 +4910,7 @@
     {
       "path": "assets/js-8066f664b6088475f23a8fc2a33a053f95a8dbb1ab02d7929c8d18284d0b235a.js",
       "bytes": 229223,
-      "sha256": "8066f664b6088475f23a8fc2a33a053f95a8dbb1ab02d7929c8d18284d0b235a",
-      "sourcePath": "assets/js-592c0fced3a2bd3a8fcbecdd0c6b2d259084b70122662de5050867611f738f88.js",
-      "sourceSHA256": "592c0fced3a2bd3a8fcbecdd0c6b2d259084b70122662de5050867611f738f88"
+      "sha256": "8066f664b6088475f23a8fc2a33a053f95a8dbb1ab02d7929c8d18284d0b235a"
     },
     {
       "path": "assets/js-9274bbcec8d96168626c732b5d31c775aa8cfb7eaa0599bec0c175908a2c1ce2.js",
@@ -4923,16 +4920,12 @@
     {
       "path": "assets/js-92ed35c9eff8f2c8592155c6b79dce7ee48b6ae0123fc7e995ad72a2977ad1e8.js",
       "bytes": 64311,
-      "sha256": "92ed35c9eff8f2c8592155c6b79dce7ee48b6ae0123fc7e995ad72a2977ad1e8",
-      "sourcePath": "assets/js-9c839d1db8ba9e66d3505c89b544a65172d8a3b0df4a91733e8c950a2d7867bb.js",
-      "sourceSHA256": "9c839d1db8ba9e66d3505c89b544a65172d8a3b0df4a91733e8c950a2d7867bb"
+      "sha256": "92ed35c9eff8f2c8592155c6b79dce7ee48b6ae0123fc7e995ad72a2977ad1e8"
     },
     {
       "path": "assets/js-9b8d91bfde9fb674fbc45430f658a826bea5307ed3246dd667bfcbbb4d7a154a.js",
       "bytes": 10713069,
-      "sha256": "9b8d91bfde9fb674fbc45430f658a826bea5307ed3246dd667bfcbbb4d7a154a",
-      "sourcePath": "assets/js-505023eee9c2b9e493fe199b503fb281bc703ee2ac42f82a9b473085475d4697.js",
-      "sourceSHA256": "505023eee9c2b9e493fe199b503fb281bc703ee2ac42f82a9b473085475d4697"
+      "sha256": "9b8d91bfde9fb674fbc45430f658a826bea5307ed3246dd667bfcbbb4d7a154a"
     },
     {
       "path": "assets/js-dea34f91a2b7a0f165cc1292dfe61060cb943b663bd8983b131dba8b3413cf61.js",
@@ -4957,28 +4950,22 @@
     {
       "path": "assets/js-ffe652ba69eedbfa7c8ffcc8db80a09542fca8d100fb44bccdf3da46671b479c.js",
       "bytes": 10712034,
-      "sha256": "ffe652ba69eedbfa7c8ffcc8db80a09542fca8d100fb44bccdf3da46671b479c",
-      "sourcePath": "assets/js-1ff08d80a70549353b9c545405a65f7aa7de8afd497a91634dc10463c95176a5.js",
-      "sourceSHA256": "1ff08d80a70549353b9c545405a65f7aa7de8afd497a91634dc10463c95176a5"
+      "sha256": "ffe652ba69eedbfa7c8ffcc8db80a09542fca8d100fb44bccdf3da46671b479c"
     },
     {
       "path": "index.html",
-      "bytes": 3527645,
-      "sha256": "9602cae61140fd7501ba54fd3537e62feb0f2deec14ed18855b04aeb648e78a4"
+      "bytes": 3527750,
+      "sha256": "377e03e4d439e4aa10628a91364ea3b026afef3385ded8b428413e54071f5c97"
     },
     {
       "path": "malzeme-studyosu.html",
       "bytes": 384,
-      "sha256": "87ef07ce6e2af546064c7b76bf792308bd7c0420955dfe0f376716c37d53e7ac",
-      "sourcePath": "malzeme-studyosu.html",
-      "sourceSHA256": "4bd5f87c03d4bc43db3702a5dbe131b147ced7d001ee700c3175541a5721f023"
+      "sha256": "87ef07ce6e2af546064c7b76bf792308bd7c0420955dfe0f376716c37d53e7ac"
     },
     {
       "path": "material-studio/index.html",
       "bytes": 1729,
-      "sha256": "6fbf7d1e6c353d2eab6669d127ae21eeff2ff930711a0fabccee080d10d7f04d",
-      "sourcePath": "material-studio/index.html",
-      "sourceSHA256": "cc6795e0703d5f7799ec12860878f4cf814533456ee4b8a096d077c1495f86ea"
+      "sha256": "6fbf7d1e6c353d2eab6669d127ae21eeff2ff930711a0fabccee080d10d7f04d"
     },
     {
       "path": "material-studio/source-provenance.json",
@@ -5018,23 +5005,17 @@
     {
       "path": "material-studio/watkins-dark10-v9.html",
       "bytes": 12591,
-      "sha256": "61a2ea6a263ce3400c2b9f207cc338e4b7eb5dab9cb6c1b3733e601dbd2a3d02",
-      "sourcePath": "material-studio/watkins-dark10-v9.html",
-      "sourceSHA256": "ef8e4ee2d46b17b5e363fecad9f289e948802019bedb82d88bed515158d358ec"
+      "sha256": "61a2ea6a263ce3400c2b9f207cc338e4b7eb5dab9cb6c1b3733e601dbd2a3d02"
     },
     {
       "path": "material-studio/watkins-light-v7.html",
       "bytes": 12695,
-      "sha256": "40d7b6b21b1f06973b6ec70ac3e9c3a6ce6d0d288ad5c7e0d6a9fe6ae6dc355f",
-      "sourcePath": "material-studio/watkins-light-v7.html",
-      "sourceSHA256": "a68fea18f07d016bdb14f8ac4f7472695dc90ea930eca520a204802dd8ab129e"
+      "sha256": "40d7b6b21b1f06973b6ec70ac3e9c3a6ce6d0d288ad5c7e0d6a9fe6ae6dc355f"
     },
     {
       "path": "model-denetimi.html",
       "bytes": 1997510,
-      "sha256": "231d8f4946070fb04c82493f5c15e8bfcfe5d5a7e6bd67bd48a35b376786e436",
-      "sourcePath": "model-denetimi.html",
-      "sourceSHA256": "a69f594dd80dde9d0470bd967ef3ce446073f41650f956cf0b946b1c3316a785"
+      "sha256": "231d8f4946070fb04c82493f5c15e8bfcfe5d5a7e6bd67bd48a35b376786e436"
     },
     {
       "path": "model-inceleme.html",
@@ -6134,9 +6115,72 @@
     {
       "path": "tum-modeller.html",
       "bytes": 1990224,
-      "sha256": "822de9e5ca80bf2a5df87b0cf0fe3e9785f9a9d3139883fadbaf2b224e38d4e8",
-      "sourcePath": "tum-modeller.html",
-      "sourceSHA256": "2f819523e9a0a1cfd6556fcbcc4966704dface9e5138d468e30c2ef0f47e0af4"
+      "sha256": "822de9e5ca80bf2a5df87b0cf0fe3e9785f9a9d3139883fadbaf2b224e38d4e8"
+    },
+    {
+      "path": "watkins-konsol/guard-config.js",
+      "bytes": 23871,
+      "sha256": "76d1bbe2a7a89d1915d5c361f90c9e43c43f3f8aea8a91294d73a9442b81dde4"
+    },
+    {
+      "path": "watkins-konsol/index.html",
+      "bytes": 2674,
+      "sha256": "e75219e98b42c090a14c07151064d2806a6dee0399d3f18d78b81179fbf16524"
+    },
+    {
+      "path": "watkins-konsol/materials.js",
+      "bytes": 18327,
+      "sha256": "e86691abb2284e7955bc41b937d046a745f588e86e8d431832d9151be888d107"
+    },
+    {
+      "path": "watkins-konsol/preview-dark.jpg",
+      "bytes": 62247,
+      "sha256": "e5b2c22a7f801d34687b2b57d223a255e6fa8f1393b84ab284a4adacd2712857"
+    },
+    {
+      "path": "watkins-konsol/preview-natural.jpg",
+      "bytes": 73287,
+      "sha256": "bc467046eff0f67fe5b73287b907e6320c78543182aba3edb4e49b7770993145"
+    },
+    {
+      "path": "watkins-konsol/preview.css",
+      "bytes": 4118,
+      "sha256": "5b0bdcbdb2347c4841aca4687ffa1edc976e8f31dfc7f5d947cf1c8c77baa4d1"
+    },
+    {
+      "path": "watkins-konsol/preview.js",
+      "bytes": 8232,
+      "sha256": "9be5100e0f9a4f486ac165c398240403b92e8c5ab794193318fced8264629162"
+    },
+    {
+      "path": "watkins-konsol/studio-environment.js",
+      "bytes": 1696,
+      "sha256": "7e4e3bc9204ca3271dab4c870c5c5156d08713e87772a3f666ff463fc4a08c84"
+    },
+    {
+      "path": "watkins-konsol/studio-finish-policy.js",
+      "bytes": 1011,
+      "sha256": "943b0f406c6f88c1a38fa0e737e95cb8b8060496d681e712a02d170a4a15c205"
+    },
+    {
+      "path": "watkins-konsol/three.min.js",
+      "bytes": 689681,
+      "sha256": "579470be3b0d8a153cd5a1cdc3615d63b9687cb44873b0d2550f4d98aaedaf4b"
+    },
+    {
+      "path": "watkins-konsol/watkins-konsol-160-dark.glb",
+      "bytes": 38049880,
+      "sha256": "a3d899b6cd236a84ad8b8295813f603af786c5b2f376cad4edeb70ff943ecee3"
+    },
+    {
+      "path": "watkins-konsol/watkins-konsol-160-natural.glb",
+      "bytes": 41276016,
+      "sha256": "0caef20e13e94120573be858c950e71aa36c474d69e999c65f219a5a9d327920"
+    },
+    {
+      "path": "watkins-konsol/watkins_console160_derived.json.gz",
+      "bytes": 2355597,
+      "sha256": "496cc745229d5af8c76276e3ae68dfb164628a161ec59ed85f8fe4e5e30cd42b"
     },
     {
       "path": "watkins-tv210-studio-materials/dark/D01/BaseColor.png",
@@ -6469,12 +6513,33 @@
       "sha256": "f9d4da472d21998f41f679aeffd43c51d550c320e6c977d8af40f82383ed12be"
     }
   ],
-  "applicationRevision": "customer-workspaces-20261124-v1",
+  "applicationRevision": "watkins-console-derived-page-20261124-v1",
   "customerWorkspaces": {
     "storage": "browser-indexeddb",
     "crossDeviceSync": false,
     "customerDataIncludedInBuild": false,
     "multipleRoomsPerCustomer": true,
     "optimisticRevisionChecks": true
-  }
+  },
+  "existingProductGeometryOrTextureContentChanged": false,
+  "derivedModelAdditions": [
+    {
+      "key": "WATKINS_CONSOLE160_DERIVED",
+      "pathPrefix": "watkins-konsol/",
+      "canonicalSizeCm": [
+        160.0,
+        72.2,
+        45.0
+      ],
+      "sourceAssetSHA256": "3e08fd046270382894b91082afb312ae398ea1f5aa6c375f094e4471db88fa22",
+      "newAssetSHA256": "ad1c1933fcb8d90db3c6b5a98dac4797e880ea8ad2fa9f8d9d0c9122777ccf4c",
+      "derivedAssetSHA256": "ad1c1933fcb8d90db3c6b5a98dac4797e880ea8ad2fa9f8d9d0c9122777ccf4c",
+      "assetPath": "watkins-konsol/watkins_console160_derived.json.gz",
+      "sourceGeometryIsOriginalCAD": false,
+      "derivedFromOriginalSource": true,
+      "originalSourceFilesUnchanged": true,
+      "officialProduct": false,
+      "heightProvisional": false
+    }
+  ]
 }

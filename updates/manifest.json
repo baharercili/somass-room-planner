@@ -3,27 +3,138 @@
   "baseRuntimeManifestSHA256": "ba5177453939671b60b3fc9dcff423f035da307afa885162e164cd90e25ba258",
   "files": [
     {
-      "path": "index.html",
-      "bytes": 3527645,
-      "sha256": "9602cae61140fd7501ba54fd3537e62feb0f2deec14ed18855b04aeb648e78a4",
-      "previousSHA256": "6e5327381919138fd851a0c426632b38e665525c9cf0f73eb1e81014b3ac7e0b"
-    },
-    {
       "path": "assets/js-def52ad42fbd65e9bc374742ab1e0f47207ff523ae304db7448a0c25bded1a04.js",
       "bytes": 259591,
       "sha256": "def52ad42fbd65e9bc374742ab1e0f47207ff523ae304db7448a0c25bded1a04",
       "previousSHA256": null
     },
     {
+      "path": "index.html",
+      "bytes": 3527750,
+      "sha256": "377e03e4d439e4aa10628a91364ea3b026afef3385ded8b428413e54071f5c97",
+      "previousSHA256": "6e5327381919138fd851a0c426632b38e665525c9cf0f73eb1e81014b3ac7e0b"
+    },
+    {
       "path": "runtime-manifest.json",
-      "bytes": 267147,
-      "sha256": "517f4a7632d61dc8dc84629b5ec6a85858e5c3495035851443e5204a392a7039",
+      "bytes": 268382,
+      "sha256": "e07e7ad1b4538b32f860dcd10c629d676165e4f3b0f9045538be5f92bcab5551",
       "previousSHA256": "ba5177453939671b60b3fc9dcff423f035da307afa885162e164cd90e25ba258"
+    },
+    {
+      "path": "watkins-konsol/guard-config.js",
+      "bytes": 23871,
+      "sha256": "76d1bbe2a7a89d1915d5c361f90c9e43c43f3f8aea8a91294d73a9442b81dde4",
+      "previousSHA256": null
+    },
+    {
+      "path": "watkins-konsol/index.html",
+      "bytes": 2674,
+      "sha256": "e75219e98b42c090a14c07151064d2806a6dee0399d3f18d78b81179fbf16524",
+      "previousSHA256": null
+    },
+    {
+      "path": "watkins-konsol/materials.js",
+      "bytes": 18327,
+      "sha256": "e86691abb2284e7955bc41b937d046a745f588e86e8d431832d9151be888d107",
+      "previousSHA256": null
+    },
+    {
+      "path": "watkins-konsol/preview-dark.jpg",
+      "bytes": 62247,
+      "sha256": "e5b2c22a7f801d34687b2b57d223a255e6fa8f1393b84ab284a4adacd2712857",
+      "previousSHA256": null
+    },
+    {
+      "path": "watkins-konsol/preview-natural.jpg",
+      "bytes": 73287,
+      "sha256": "bc467046eff0f67fe5b73287b907e6320c78543182aba3edb4e49b7770993145",
+      "previousSHA256": null
+    },
+    {
+      "path": "watkins-konsol/preview.css",
+      "bytes": 4118,
+      "sha256": "5b0bdcbdb2347c4841aca4687ffa1edc976e8f31dfc7f5d947cf1c8c77baa4d1",
+      "previousSHA256": null
+    },
+    {
+      "path": "watkins-konsol/preview.js",
+      "bytes": 8232,
+      "sha256": "9be5100e0f9a4f486ac165c398240403b92e8c5ab794193318fced8264629162",
+      "previousSHA256": null
+    },
+    {
+      "path": "watkins-konsol/studio-environment.js",
+      "bytes": 1696,
+      "sha256": "7e4e3bc9204ca3271dab4c870c5c5156d08713e87772a3f666ff463fc4a08c84",
+      "previousSHA256": null
+    },
+    {
+      "path": "watkins-konsol/studio-finish-policy.js",
+      "bytes": 1011,
+      "sha256": "943b0f406c6f88c1a38fa0e737e95cb8b8060496d681e712a02d170a4a15c205",
+      "previousSHA256": null
+    },
+    {
+      "path": "watkins-konsol/three.min.js",
+      "bytes": 689681,
+      "sha256": "579470be3b0d8a153cd5a1cdc3615d63b9687cb44873b0d2550f4d98aaedaf4b",
+      "previousSHA256": null
+    },
+    {
+      "path": "watkins-konsol/watkins-konsol-160-dark.glb",
+      "bytes": 38049880,
+      "sha256": "a3d899b6cd236a84ad8b8295813f603af786c5b2f376cad4edeb70ff943ecee3",
+      "previousSHA256": null
+    },
+    {
+      "path": "watkins-konsol/watkins-konsol-160-natural.glb",
+      "bytes": 41276016,
+      "sha256": "0caef20e13e94120573be858c950e71aa36c474d69e999c65f219a5a9d327920",
+      "previousSHA256": null
+    },
+    {
+      "path": "watkins-konsol/watkins_console160_derived.json.gz",
+      "bytes": 2355597,
+      "sha256": "496cc745229d5af8c76276e3ae68dfb164628a161ec59ed85f8fe4e5e30cd42b",
+      "previousSHA256": null
+    }
+  ],
+  "derivedModelAdditions": [
+    {
+      "key": "WATKINS_CONSOLE160_DERIVED",
+      "pathPrefix": "watkins-konsol/",
+      "canonicalSizeCm": [
+        160.0,
+        72.2,
+        45.0
+      ],
+      "sourceAssetSHA256": "3e08fd046270382894b91082afb312ae398ea1f5aa6c375f094e4471db88fa22",
+      "newAssetSHA256": "ad1c1933fcb8d90db3c6b5a98dac4797e880ea8ad2fa9f8d9d0c9122777ccf4c",
+      "derivedAssetSHA256": "ad1c1933fcb8d90db3c6b5a98dac4797e880ea8ad2fa9f8d9d0c9122777ccf4c",
+      "assetPath": "watkins-konsol/watkins_console160_derived.json.gz",
+      "sourceGeometryIsOriginalCAD": false,
+      "derivedFromOriginalSource": true,
+      "originalSourceFilesUnchanged": true,
+      "officialProduct": false,
+      "heightProvisional": false
     }
   ],
   "smokeTestFiles": [
     "index.html",
     "assets/js-def52ad42fbd65e9bc374742ab1e0f47207ff523ae304db7448a0c25bded1a04.js",
-    "runtime-manifest.json"
+    "runtime-manifest.json",
+    "watkins-konsol/guard-config.js",
+    "watkins-konsol/index.html",
+    "watkins-konsol/materials.js",
+    "watkins-konsol/preview-dark.jpg",
+    "watkins-konsol/preview-natural.jpg",
+    "watkins-konsol/preview.css",
+    "watkins-konsol/preview.js",
+    "watkins-konsol/studio-environment.js",
+    "watkins-konsol/studio-finish-policy.js",
+    "watkins-konsol/three.min.js",
+    "watkins-konsol/watkins-konsol-160-dark.glb",
+    "watkins-konsol/watkins-konsol-160-natural.glb",
+    "watkins-konsol/watkins_console160_derived.json.gz"
   ]
 }

@@ -1,11 +1,12 @@
 #!/usr/bin/env python3
-"""Apply a verified, cumulative text/runtime delta after the frozen ZIP restore.
+"""Apply a verified cumulative runtime delta with one explicit derived-model addition.
 
 Customer records are browser/server runtime data and never belong in this delta.
 The update manifest is an inventory of application files, not customer content.
 """
 
 import argparse
+import gzip
 import hashlib
 import json
 import os
@@ -19,6 +20,9 @@ PUBLIC_PREFIX = "/somass-room-planner/"
 MAX_SITE_BYTES = 1_000_000_000
 MANIFEST_NAME = "runtime-manifest.json"
 SHA256 = re.compile(r"[0-9a-f]{64}\Z")
+ADDITION_PREFIXES = {"watkins-konsol/", "watkins-konsol-160/"}
+APPROVED_SOURCE_SHA256 = "3e08fd046270382894b91082afb312ae398ea1f5aa6c375f094e4471db88fa22"
+TEXT_SUFFIXES = {".html", ".js", ".css"}
 
 
 def safe_name(name):
@@ -87,8 +91,14 @@ def record_map(records, previous=False):
 def validate_runtime(document):
     if not isinstance(document, dict) or document.get("format") != "somass-room-pages-runtime-v1" or document.get("publicPrefix") != PUBLIC_PREFIX:
         raise ValueError("Runtime manifest identity differs")
-    if document.get("geometryOrTextureContentChanged") is not False or document.get("binaryIntegrity", {}).get("allByteExact") is not True:
+    if document.get("binaryIntegrity", {}).get("allByteExact") is not True:
         raise ValueError("Runtime binary integrity proof is missing")
+    if document.get("geometryOrTextureContentChanged") is not False:
+        # A new model page is explicit; the pre-existing source binaries stay exact.
+        additions = document.get("derivedModelAdditions")
+        if document.get("geometryOrTextureContentChanged") is not True or not isinstance(additions, list) or len(additions) != 1 or document.get("existingProductGeometryOrTextureContentChanged") is not False or document.get("binaryIntegrity", {}).get("allOriginalBaselineBinaryFilesUnchanged") is not True:
+            raise ValueError("Only an explicit new derived-model addition is permitted")
+        validate_addition_metadata(additions[0])
     if document.get("verification", {}).get("pass") is not True:
         raise ValueError("Runtime reference verification did not pass")
     expected = record_map(document.get("files"))
@@ -143,6 +153,68 @@ def same_record(left, right):
     return left["bytes"] == right["bytes"] and left["sha256"] == right["sha256"]
 
 
+def validate_addition_metadata(addition):
+    if not isinstance(addition, dict) or addition.get("pathPrefix") not in ADDITION_PREFIXES:
+        raise ValueError("Derived model addition is outside the approved new page")
+    prefix = addition["pathPrefix"]
+    safe_name(prefix + "index.html")
+    if not isinstance(addition.get("key"), str) or not addition["key"].startswith("WATKINS_CONSOLE"):
+        raise ValueError("Unknown derived model key")
+    size = addition.get("canonicalSizeCm")
+    if not isinstance(size, list) or len(size) != 3 or not all(type(x) in (int, float) and 0 < x < 1000 for x in size):
+        raise ValueError("Derived model dimensions are missing")
+    for field in ("sourceAssetSHA256", "newAssetSHA256"):
+        if not isinstance(addition.get(field), str) or not SHA256.fullmatch(addition[field]):
+            raise ValueError("Derived model checksum is missing")
+    if addition["sourceAssetSHA256"] != APPROVED_SOURCE_SHA256 or addition.get("derivedAssetSHA256") != addition["newAssetSHA256"]:
+        raise ValueError("Derived model source or asset identity differs")
+    asset = addition.get("assetPath")
+    safe_name(asset)
+    if not asset.startswith(prefix) or not asset.endswith(".json.gz"):
+        raise ValueError("Derived asset is outside its dedicated page")
+    if addition.get("sourceGeometryIsOriginalCAD") is not False or addition.get("derivedFromOriginalSource") is not True or addition.get("officialProduct") is not False:
+        raise ValueError("Derived-model provenance must be explicit")
+
+
+def validate_derived_additions(document, current, merged, delta, source):
+    additions = document.get("derivedModelAdditions", [])
+    if not additions:
+        return
+    if len(additions) != 1:
+        raise ValueError("Only one dedicated derived-model page may be added")
+    addition = additions[0]
+    validate_addition_metadata(addition)
+    prefix = addition["pathPrefix"]
+    if any(name.startswith(prefix) for name in current):
+        raise ValueError("The derived page must be new to the frozen baseline")
+    # Check the actual merged inventory, never trust a boolean proof alone.
+    for name, old in current.items():
+        if name == MANIFEST_NAME or Path(name).suffix in TEXT_SUFFIXES:
+            continue
+        if name not in merged or not same_record(old, merged[name]):
+            raise ValueError("An original baseline binary was modified: " + name)
+    for name, record in delta.items():
+        if record["previousSHA256"] is None and Path(name).suffix not in TEXT_SUFFIXES and not name.startswith(prefix):
+            raise ValueError("New binary is outside the dedicated derived page: " + name)
+    new_page = [name for name in merged if name.startswith(prefix)]
+    if not new_page or prefix + "index.html" not in new_page:
+        raise ValueError("Derived page inventory is empty")
+    for name in new_page:
+        if name not in delta or delta[name]["previousSHA256"] is not None:
+            raise ValueError("Every derived page file must be an explicit new delta file")
+    path = regular_file(source, addition["assetPath"])
+    raw = gzip.decompress(path.read_bytes())
+    if sha_bytes(raw) != addition["newAssetSHA256"]:
+        raise ValueError("Derived geometry's unpacked checksum differs")
+    asset = json.loads(raw)
+    evidence = asset.get("evidence", {})
+    if asset.get("key") != addition["key"] or evidence.get("canonicalSizeCm") != addition["canonicalSizeCm"] or evidence.get("sourceAssetSHA256") != addition["sourceAssetSHA256"] or evidence.get("sourceGeometryIsOriginalCAD") is not False or evidence.get("derivedFromOriginalSource") is not True or evidence.get("isOfficial3D") is not False or evidence.get("originalSourceFilesUnchanged") is not True:
+        raise ValueError("Derived asset provenance or dimensions differ from the manifest")
+    total = sum(record["bytes"] for record in merged.values())
+    if total > MAX_SITE_BYTES:
+        raise ValueError("Derived addition exceeds the Pages byte budget")
+
+
 def apply_updates(manifest_path, site):
     root, manifest, delta = read_delta(manifest_path)
     if site.is_symlink() or any(p.is_symlink() for p in site.parents) or not site.is_dir():
@@ -176,6 +248,8 @@ def apply_updates(manifest_path, site):
     updated_expected = validate_runtime(updated_runtime)
     if set(updated_expected) != set(merged) - {MANIFEST_NAME} or any(not same_record(record, merged[name]) for name, record in updated_expected.items()):
         raise ValueError("Updated runtime manifest differs from the merged inventory")
+
+    validate_derived_additions(updated_runtime, current, merged, delta, source)
 
     # Validation above is complete before any write. Hard links preserve the
     # frozen assets without copying 600+ MB; changed files replace links instead
