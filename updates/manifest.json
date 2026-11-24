@@ -9,6 +9,12 @@
       "previousSHA256": null
     },
     {
+      "path": "assets/js-344a391c4d4b3ad4e743192e5ba660e6363c958ea02f54624be73ed291b6c110.js",
+      "bytes": 307576,
+      "sha256": "344a391c4d4b3ad4e743192e5ba660e6363c958ea02f54624be73ed291b6c110",
+      "previousSHA256": null
+    },
+    {
       "path": "assets/js-63259dc6a541ee9e094452e9608f78aa1ccfd8d725107e92679bc2d6aa55c516.js",
       "bytes": 285679,
       "sha256": "63259dc6a541ee9e094452e9608f78aa1ccfd8d725107e92679bc2d6aa55c516",
@@ -35,13 +41,13 @@
     {
       "path": "index.html",
       "bytes": 3529049,
-      "sha256": "fc214c00b376439cbabeec1b2a1c9e67c45a35846c36613c5594a65d4c617ef4",
+      "sha256": "b93c015daebdd8ea5dc4b41583d8ebf3332dce472298788576c618b3d5523e37",
       "previousSHA256": "6e5327381919138fd851a0c426632b38e665525c9cf0f73eb1e81014b3ac7e0b"
     },
     {
       "path": "runtime-manifest.json",
-      "bytes": 273068,
-      "sha256": "7b7ec9a18c29ca66b07bf629d975c3c9ecc86e0d9369ee29d6eb0873e1e455dd",
+      "bytes": 273282,
+      "sha256": "1c5e0c1f821ba64adb8d95f37c6baedac1246671ed1ac5e006a46924341752d3",
       "previousSHA256": "ba5177453939671b60b3fc9dcff423f035da307afa885162e164cd90e25ba258"
     },
     {
@@ -163,6 +169,7 @@
     "watkins-konsol/watkins-konsol-160-dark.glb",
     "watkins-konsol/watkins-konsol-160-natural.glb",
     "watkins-konsol/watkins_console160_derived.json.gz",
+    "assets/js-344a391c4d4b3ad4e743192e5ba660e6363c958ea02f54624be73ed291b6c110.js",
     "assets/js-197bc56492f4dc45dd74debf6d674e162e2d922c1d2e27254ff74511593a0c40.js"
   ]
 }
