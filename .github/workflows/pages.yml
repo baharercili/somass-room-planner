@@ -8,6 +8,7 @@ on:
       - 'room-web-manifest.json'
       - 'parts/**'
       - 'room-publish/**'
+      - 'updates/**'
       - '.github/workflows/pages.yml'
       - '.github/actions/wait-pages-artifact/**'
 
@@ -35,6 +36,8 @@ jobs:
         uses: actions/checkout@v6
       - name: Verify every package part and static runtime file
         run: python3 room-publish/restore.py --site _site
+      - name: Apply verified cumulative application updates
+        run: python3 room-publish/apply-updates.py --site _site
       - name: Configure Pages
         uses: actions/configure-pages@v5
       - name: Upload the verified static website
