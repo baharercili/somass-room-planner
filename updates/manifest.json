@@ -3,6 +3,12 @@
   "baseRuntimeManifestSHA256": "ba5177453939671b60b3fc9dcff423f035da307afa885162e164cd90e25ba258",
   "files": [
     {
+      "path": "assets/js-197bc56492f4dc45dd74debf6d674e162e2d922c1d2e27254ff74511593a0c40.js",
+      "bytes": 307174,
+      "sha256": "197bc56492f4dc45dd74debf6d674e162e2d922c1d2e27254ff74511593a0c40",
+      "previousSHA256": null
+    },
+    {
       "path": "assets/js-63259dc6a541ee9e094452e9608f78aa1ccfd8d725107e92679bc2d6aa55c516.js",
       "bytes": 285679,
       "sha256": "63259dc6a541ee9e094452e9608f78aa1ccfd8d725107e92679bc2d6aa55c516",
@@ -16,8 +22,8 @@
     },
     {
       "path": "cloud-customers/customer-cloud-config.js",
-      "bytes": 323,
-      "sha256": "c0f9d9a23cee66c7faf910e77c45d052641a79a96cecaac3a689d4e79a4c7f08",
+      "bytes": 428,
+      "sha256": "3c962c1d10a21ac07ba9e372dc48016c2f05ec643081189b0307cc2abbf7a87a",
       "previousSHA256": null
     },
     {
@@ -28,14 +34,14 @@
     },
     {
       "path": "index.html",
-      "bytes": 3528425,
-      "sha256": "6c84ff5548b6b7fd24ed17e4cacfff507eb1a740c495cf52bc3d8faf987be3d0",
+      "bytes": 3529049,
+      "sha256": "fc214c00b376439cbabeec1b2a1c9e67c45a35846c36613c5594a65d4c617ef4",
       "previousSHA256": "6e5327381919138fd851a0c426632b38e665525c9cf0f73eb1e81014b3ac7e0b"
     },
     {
       "path": "runtime-manifest.json",
-      "bytes": 270241,
-      "sha256": "c1da146cfb8690ecf4a1e5a828b346c13c76f5bf3613bca92342e0bd0c7a6b6a",
+      "bytes": 273068,
+      "sha256": "7b7ec9a18c29ca66b07bf629d975c3c9ecc86e0d9369ee29d6eb0873e1e455dd",
       "previousSHA256": "ba5177453939671b60b3fc9dcff423f035da307afa885162e164cd90e25ba258"
     },
     {
@@ -138,7 +144,10 @@
     }
   ],
   "smokeTestFiles": [
+    "assets/js-63259dc6a541ee9e094452e9608f78aa1ccfd8d725107e92679bc2d6aa55c516.js",
     "assets/js-def52ad42fbd65e9bc374742ab1e0f47207ff523ae304db7448a0c25bded1a04.js",
+    "cloud-customers/customer-cloud-config.js",
+    "cloud-customers/vendor/supabase.js",
     "index.html",
     "runtime-manifest.json",
     "watkins-konsol/guard-config.js",
@@ -154,8 +163,6 @@
     "watkins-konsol/watkins-konsol-160-dark.glb",
     "watkins-konsol/watkins-konsol-160-natural.glb",
     "watkins-konsol/watkins_console160_derived.json.gz",
-    "assets/js-63259dc6a541ee9e094452e9608f78aa1ccfd8d725107e92679bc2d6aa55c516.js",
-    "cloud-customers/vendor/supabase.js",
-    "cloud-customers/customer-cloud-config.js"
+    "assets/js-197bc56492f4dc45dd74debf6d674e162e2d922c1d2e27254ff74511593a0c40.js"
   ]
 }

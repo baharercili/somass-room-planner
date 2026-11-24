@@ -2,8 +2,8 @@
   "format": "somass-room-pages-runtime-v1",
   "publicPrefix": "/somass-room-planner/",
   "sourceTreeSHA256": "e293e30df2e8df696408ef63f188e4a5676893b8acc34fd6f3b01e8110f6aa67",
-  "exportTreeSHA256ExcludingManifest": "d65cea71d6564d9068fe722b05e5ae4ff8417d34551e6bcaeef8e3bac0d9bac8",
-  "filesExcludingManifest": 1280,
+  "exportTreeSHA256ExcludingManifest": "45b4374ec40a85e7ad009169fdf2145ad830c5cc951cb16845b7ac57f27a5f23",
+  "filesExcludingManifest": 1281,
   "geometryOrTextureContentChanged": true,
   "productGeometryOrTextureContentChanged": true,
   "exportOnlyChanges": [
@@ -110,7 +110,7 @@
   },
   "verification": {
     "pass": true,
-    "localReferenceOccurrences": 2645,
+    "localReferenceOccurrences": 2647,
     "missingReferences": [],
     "crossRootRuntimeReferences": [],
     "redirects": [
@@ -4893,6 +4893,11 @@
       "sha256": "02bb4ade710f3e607329e37a21f098bc3ac70eb6e33daf8a65e79f4db785e7b2"
     },
     {
+      "path": "assets/js-197bc56492f4dc45dd74debf6d674e162e2d922c1d2e27254ff74511593a0c40.js",
+      "bytes": 307174,
+      "sha256": "197bc56492f4dc45dd74debf6d674e162e2d922c1d2e27254ff74511593a0c40"
+    },
+    {
       "path": "assets/js-1c6ef24b307aa998a225fc82366330240c852fb8bc670b4b98eefaaa64e6d83c.js",
       "bytes": 36297660,
       "sha256": "1c6ef24b307aa998a225fc82366330240c852fb8bc670b4b98eefaaa64e6d83c"
@@ -4959,8 +4964,8 @@
     },
     {
       "path": "cloud-customers/customer-cloud-config.js",
-      "bytes": 323,
-      "sha256": "c0f9d9a23cee66c7faf910e77c45d052641a79a96cecaac3a689d4e79a4c7f08"
+      "bytes": 428,
+      "sha256": "3c962c1d10a21ac07ba9e372dc48016c2f05ec643081189b0307cc2abbf7a87a"
     },
     {
       "path": "cloud-customers/vendor/supabase.js",
@@ -4969,8 +4974,8 @@
     },
     {
       "path": "index.html",
-      "bytes": 3528425,
-      "sha256": "6c84ff5548b6b7fd24ed17e4cacfff507eb1a740c495cf52bc3d8faf987be3d0"
+      "bytes": 3529049,
+      "sha256": "fc214c00b376439cbabeec1b2a1c9e67c45a35846c36613c5594a65d4c617ef4"
     },
     {
       "path": "malzeme-studyosu.html",
@@ -6528,23 +6533,33 @@
       "sha256": "f9d4da472d21998f41f679aeffd43c51d550c320e6c977d8af40f82383ed12be"
     }
   ],
-  "applicationRevision": "cloud-customers-20261124-v1",
+  "applicationRevision": "shared-room-customers-20261124-v1",
   "customerWorkspaces": {
     "provider": "supabase",
+    "mode": "shared",
     "projectRef": "kjjgsikkkgnrlanhfqum",
-    "ownership": "authenticated-owner-only",
-    "authenticatedNonAnonymousAccountRequired": true,
-    "storage": "supabase-postgresql-with-separate-browser-local-records",
+    "workspaceId": "5248c66f-a4bc-43df-906b-656960e5ce47",
+    "commonScope": {
+      "projectRef": "kjjgsikkkgnrlanhfqum",
+      "workspaceId": "5248c66f-a4bc-43df-906b-656960e5ce47"
+    },
+    "access": "anyone-with-site-link",
+    "signInRequired": false,
+    "authenticatedNonAnonymousAccountRequired": false,
+    "sharedAcrossVisitors": true,
+    "storage": "supabase-shared-postgresql-with-separate-browser-local-records",
     "crossDeviceSync": true,
-    "sharedAcrossAllRegisteredUsers": false,
-    "localRecordsPreserved": true,
+    "privateOwnerCustomerRowsAccessibleThroughSharedAPI": false,
+    "privateRecordsAutomaticallyShared": false,
     "localRecordsAutomaticallyUploaded": false,
+    "localRecordsPreserved": true,
     "customerDataIncludedInBuild": false,
     "multipleRoomsPerCustomer": true,
     "optimisticRevisionChecks": true,
-    "migrationSHA256": "670c745c826d5d18dfd01aec99f14f3569aea71065fc3378ca0cd331d3aee864",
-    "anonymousReadDeniedLive": true,
-    "liveEndToEndAuthenticatedSavePending": true
+    "foreignRevisionPollingSeconds": 15,
+    "pollingPausesWhenPageHidden": true,
+    "migrationSHA256": "a2debd7dcede617a8d10089702a6fe34826a50097d3891290f4586a5e2c51c4e",
+    "liveEndToEndAnonymousSavePending": true
   },
   "existingProductGeometryOrTextureContentChanged": false,
   "derivedModelAdditions": [
@@ -6571,6 +6586,33 @@
   "textureChangesInThisUpdate": false,
   "cloudCustomers": {
     "provider": "supabase",
+    "mode": "shared",
+    "projectRef": "kjjgsikkkgnrlanhfqum",
+    "workspaceId": "5248c66f-a4bc-43df-906b-656960e5ce47",
+    "commonScope": {
+      "projectRef": "kjjgsikkkgnrlanhfqum",
+      "workspaceId": "5248c66f-a4bc-43df-906b-656960e5ce47"
+    },
+    "access": "anyone-with-site-link",
+    "signInRequired": false,
+    "authenticatedNonAnonymousAccountRequired": false,
+    "sharedAcrossVisitors": true,
+    "storage": "supabase-shared-postgresql-with-separate-browser-local-records",
+    "crossDeviceSync": true,
+    "privateOwnerCustomerRowsAccessibleThroughSharedAPI": false,
+    "privateRecordsAutomaticallyShared": false,
+    "localRecordsAutomaticallyUploaded": false,
+    "localRecordsPreserved": true,
+    "customerDataIncludedInBuild": false,
+    "multipleRoomsPerCustomer": true,
+    "optimisticRevisionChecks": true,
+    "foreignRevisionPollingSeconds": 15,
+    "pollingPausesWhenPageHidden": true,
+    "migrationSHA256": "a2debd7dcede617a8d10089702a6fe34826a50097d3891290f4586a5e2c51c4e",
+    "liveEndToEndAnonymousSavePending": true
+  },
+  "privateCloudCustomers": {
+    "provider": "supabase",
     "projectRef": "kjjgsikkkgnrlanhfqum",
     "ownership": "authenticated-owner-only",
     "authenticatedNonAnonymousAccountRequired": true,
@@ -6585,5 +6627,32 @@
     "migrationSHA256": "670c745c826d5d18dfd01aec99f14f3569aea71065fc3378ca0cd331d3aee864",
     "anonymousReadDeniedLive": true,
     "liveEndToEndAuthenticatedSavePending": true
+  },
+  "cloudInfo": {
+    "provider": "supabase",
+    "mode": "shared",
+    "projectRef": "kjjgsikkkgnrlanhfqum",
+    "workspaceId": "5248c66f-a4bc-43df-906b-656960e5ce47",
+    "commonScope": {
+      "projectRef": "kjjgsikkkgnrlanhfqum",
+      "workspaceId": "5248c66f-a4bc-43df-906b-656960e5ce47"
+    },
+    "access": "anyone-with-site-link",
+    "signInRequired": false,
+    "authenticatedNonAnonymousAccountRequired": false,
+    "sharedAcrossVisitors": true,
+    "storage": "supabase-shared-postgresql-with-separate-browser-local-records",
+    "crossDeviceSync": true,
+    "privateOwnerCustomerRowsAccessibleThroughSharedAPI": false,
+    "privateRecordsAutomaticallyShared": false,
+    "localRecordsAutomaticallyUploaded": false,
+    "localRecordsPreserved": true,
+    "customerDataIncludedInBuild": false,
+    "multipleRoomsPerCustomer": true,
+    "optimisticRevisionChecks": true,
+    "foreignRevisionPollingSeconds": 15,
+    "pollingPausesWhenPageHidden": true,
+    "migrationSHA256": "a2debd7dcede617a8d10089702a6fe34826a50097d3891290f4586a5e2c51c4e",
+    "liveEndToEndAnonymousSavePending": true
   }
 }
