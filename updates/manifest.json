@@ -1,0 +1,29 @@
+{
+  "version": 1,
+  "baseRuntimeManifestSHA256": "ba5177453939671b60b3fc9dcff423f035da307afa885162e164cd90e25ba258",
+  "files": [
+    {
+      "path": "index.html",
+      "bytes": 3527645,
+      "sha256": "9602cae61140fd7501ba54fd3537e62feb0f2deec14ed18855b04aeb648e78a4",
+      "previousSHA256": "6e5327381919138fd851a0c426632b38e665525c9cf0f73eb1e81014b3ac7e0b"
+    },
+    {
+      "path": "assets/js-def52ad42fbd65e9bc374742ab1e0f47207ff523ae304db7448a0c25bded1a04.js",
+      "bytes": 259591,
+      "sha256": "def52ad42fbd65e9bc374742ab1e0f47207ff523ae304db7448a0c25bded1a04",
+      "previousSHA256": null
+    },
+    {
+      "path": "runtime-manifest.json",
+      "bytes": 267147,
+      "sha256": "517f4a7632d61dc8dc84629b5ec6a85858e5c3495035851443e5204a392a7039",
+      "previousSHA256": "ba5177453939671b60b3fc9dcff423f035da307afa885162e164cd90e25ba258"
+    }
+  ],
+  "smokeTestFiles": [
+    "index.html",
+    "assets/js-def52ad42fbd65e9bc374742ab1e0f47207ff523ae304db7448a0c25bded1a04.js",
+    "runtime-manifest.json"
+  ]
+}
