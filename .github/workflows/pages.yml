@@ -1,0 +1,61 @@
+name: Publish SO-MASS Room Planner
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - 'room-web-manifest.json'
+      - 'parts/**'
+      - 'room-publish/**'
+      - '.github/workflows/pages.yml'
+      - '.github/actions/wait-pages-artifact/**'
+
+permissions:
+  contents: read
+  actions: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    env:
+      PAGES_ARTIFACT_NAME: github-pages-${{ github.run_id }}-${{ github.run_attempt }}
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Checkout verified Room Planner package
+        uses: actions/checkout@v6
+      - name: Verify every package part and static runtime file
+        run: python3 room-publish/restore.py --site _site
+      - name: Configure Pages
+        uses: actions/configure-pages@v5
+      - name: Upload the verified static website
+        id: upload-pages
+        uses: actions/upload-pages-artifact@v4
+        with:
+          name: ${{ env.PAGES_ARTIFACT_NAME }}
+          path: _site
+      - name: Wait for this attempt's Pages artifact metadata
+        timeout-minutes: 2
+        uses: ./.github/actions/wait-pages-artifact
+        with:
+          artifact-name: ${{ env.PAGES_ARTIFACT_NAME }}
+          artifact-id: ${{ steps.upload-pages.outputs.artifact_id }}
+      - name: Publish Room Planner
+        id: deployment
+        uses: actions/deploy-pages@v4
+        with:
+          artifact_name: ${{ env.PAGES_ARTIFACT_NAME }}
+      - name: Check deployed pages, native model and both wood finishes
+        env:
+          SOMASS_PAGES_URL: ${{ steps.deployment.outputs.page_url }}
+        run: python3 room-publish/check-published.py
+
