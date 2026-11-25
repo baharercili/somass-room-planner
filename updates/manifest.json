@@ -40,26 +40,26 @@
     },
     {
       "path": "draft-products/draft-products.css",
-      "bytes": 3966,
-      "sha256": "b83ae6b5a76e029d981fb186b4ba56f3a61c796ecc276357615c15d91d754ffa",
+      "bytes": 4081,
+      "sha256": "65d0d49ef28b6a88eb745492f09a249852472101da74866f8551d98a509f6661",
       "previousSHA256": null
     },
     {
       "path": "draft-products/draft-products.js",
-      "bytes": 8117,
-      "sha256": "1aeebd42dc604904395ff47242ab790b3dc5db9da1cd01531b0f7b9aeafc582c",
+      "bytes": 8292,
+      "sha256": "0b7e8bf1a9d12ab0552abe3bead7d635098daf7bc22584f18a8ae6b9b84789a3",
       "previousSHA256": null
     },
     {
       "path": "index.html",
-      "bytes": 3529364,
-      "sha256": "d5b0ed8282fe42d60b2198e54c77738c91561d286cb8dc26f1e9028e3f2b0a32",
+      "bytes": 3529388,
+      "sha256": "b4b3481a58073d3b13697055d6cbc7250329067b9f4f56fcf1ab917a72019f78",
       "previousSHA256": "6e5327381919138fd851a0c426632b38e665525c9cf0f73eb1e81014b3ac7e0b"
     },
     {
       "path": "runtime-manifest.json",
       "bytes": 273833,
-      "sha256": "f41dc6c09e17c70df179b5fe6579c91bf0807db0c5fa675edbdcb67cc61d34fb",
+      "sha256": "8148cb3cb10193a56da54c2c7037ed01a4ec1dd50ba38fed6d36e599960b98c7",
       "previousSHA256": "ba5177453939671b60b3fc9dcff423f035da307afa885162e164cd90e25ba258"
     },
     {
@@ -70,8 +70,8 @@
     },
     {
       "path": "watkins-konsol/index.html",
-      "bytes": 2805,
-      "sha256": "731264e9d9174daf215744390de4c5c4cf73f3f24498262edf3e2cbea3615197",
+      "bytes": 2829,
+      "sha256": "8dc7613e97abaa884cd4761b3a61bb516eb7c45d3a2204323e06d90bc5b71457",
       "previousSHA256": null
     },
     {
@@ -100,8 +100,8 @@
     },
     {
       "path": "watkins-konsol/preview.js",
-      "bytes": 8294,
-      "sha256": "54c8e5cb476c21952533eac9de8f34194fa57baaf67121ac5e312e208cd8c17c",
+      "bytes": 8546,
+      "sha256": "46220ba2d0975e78a5a39b4d5f26be92375f506d872d117f067dfce6d5013145",
       "previousSHA256": null
     },
     {

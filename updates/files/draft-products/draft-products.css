@@ -10,6 +10,8 @@
   background: rgba(255, 255, 255, .45);
 }
 #somass-planner-v2 .sp-workspace-tabs .sp-workspace-tab {
+  -webkit-appearance: none;
+  appearance: none;
   min-height: 40px;
   padding: 9px 15px;
   border: 0;
@@ -21,7 +23,8 @@
   cursor: pointer;
   white-space: nowrap;
 }
-#somass-planner-v2 .sp-workspace-tabs .sp-workspace-tab[aria-selected="true"] {
+#somass-planner-v2 .sp-workspace-tabs .sp-workspace-tab[aria-selected="true"],
+#somass-planner-v2 .sp-workspace-tabs .sp-workspace-tab.is-active {
   background: var(--sp-text, #2d3c32);
   color: #fff;
 }

@@ -88,6 +88,8 @@
     function syncTabs() {
       roomTab.setAttribute('aria-selected', String(view === 'room'));
       draftTab.setAttribute('aria-selected', String(view === 'drafts'));
+      roomTab.className = 'sp-workspace-tab' + (view === 'room' ? ' is-active' : '');
+      draftTab.className = 'sp-workspace-tab' + (view === 'drafts' ? ' is-active' : '');
       roomTab.tabIndex = view === 'room' ? 0 : -1;
       draftTab.tabIndex = view === 'drafts' ? 0 : -1;
       root.setAttribute('data-sp-workspace-view', view);
