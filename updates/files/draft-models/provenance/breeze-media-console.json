@@ -24,11 +24,17 @@
   "rawDwgIncluded": false,
   "hasSourceColors": false,
   "sourceUnitsMetadata": "inches (DWG INSUNITS=1; ACIS units_in_mm=25.4)",
-  "physicalScaleVerified": false,
+  "physicalScaleVerified": true,
   "limitations": [
     "Original embedded DWG thumbnail only.",
     "72 direct solid bodies and 40 inserted hardware instances are present.",
     "Some curved hardware surfaces require a compatible CAD export before complete interactive 3D is available.",
-    "Physical dimensions remain unverified; no guessed measurement is displayed."
-  ]
+    "Height remains unverified; no full-dimension tuple or scaled model is published."
+  ],
+  "physicalScaleInterpretation": "millimetres; user confirmed width and depth",
+  "confirmedDimensionsCm": {
+    "width": 182.4,
+    "depth": 41.2
+  },
+  "dimensionConfirmation": "User confirmed 182.4 cm width and 41.2 cm depth; height remains unverified."
 }

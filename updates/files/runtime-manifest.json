@@ -2,7 +2,7 @@
   "format": "somass-room-pages-runtime-v1",
   "publicPrefix": "/somass-room-planner/",
   "sourceTreeSHA256": "e293e30df2e8df696408ef63f188e4a5676893b8acc34fd6f3b01e8110f6aa67",
-  "exportTreeSHA256ExcludingManifest": "5281beb8c7f74250ec4757a2bbdc462b5f3d42a4d46973252f9ca08aaf1208af",
+  "exportTreeSHA256ExcludingManifest": "76bd5bbf8a0665a49a33683ab7de545a04e4e4224595aab989cd9c340588ef97",
   "filesExcludingManifest": 1298,
   "geometryOrTextureContentChanged": true,
   "productGeometryOrTextureContentChanged": true,
@@ -4989,8 +4989,8 @@
     },
     {
       "path": "draft-models/models.json",
-      "bytes": 2910,
-      "sha256": "653d16fff10b8fed462a620c451d501f3246d2114b4e7b52bf4e78e2938832d3"
+      "bytes": 3077,
+      "sha256": "b6ced3ca2b9f80747ca0559e58c999027d72ac54a320a9fb14f0d671d3704310"
     },
     {
       "path": "draft-models/previews/azora-chair.png",
@@ -5014,8 +5014,8 @@
     },
     {
       "path": "draft-models/provenance/breeze-media-console.json",
-      "bytes": 1390,
-      "sha256": "ae30bba5ab5e2adccd06f0c63c03fe01b8c90e2af499fe223c49569156c2a2ac"
+      "bytes": 1652,
+      "sha256": "7ce0487e1e62596e5e2afc6f863920ba45ef82d8f5dd6bfa01dd549abc8cbe61"
     },
     {
       "path": "draft-models/provenance/fluted-sideboard.json",
@@ -5044,8 +5044,8 @@
     },
     {
       "path": "draft-products/draft-products-registry.js",
-      "bytes": 1321,
-      "sha256": "c6e3ae9cd787d2da9038bb8299c44fc63119808c0912dfb51c973f5d4643b8fb"
+      "bytes": 1340,
+      "sha256": "3dfdc304ff6a0be2df0eb9d736a773921b3be8060953303699d8af5260e92d5f"
     },
     {
       "path": "draft-products/draft-products.css",
@@ -6806,7 +6806,12 @@
       "previewSHA256": "cea7d289b67d72b0fab2d90cd8cf9d6289a8e4938864bb92b5c82ceb78e95379",
       "provenanceAssetPath": "draft-models/provenance/breeze-media-console.json",
       "dimensionsCm": null,
-      "provenanceSHA256": "ae30bba5ab5e2adccd06f0c63c03fe01b8c90e2af499fe223c49569156c2a2ac"
+      "provenanceSHA256": "7ce0487e1e62596e5e2afc6f863920ba45ef82d8f5dd6bfa01dd549abc8cbe61",
+      "confirmedDimensionsCm": {
+        "width": 182.4,
+        "depth": 41.2
+      },
+      "dimensionConfirmation": "user-confirmed-width-and-depth"
     }
   ]
 }

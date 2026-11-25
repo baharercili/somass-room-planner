@@ -46,8 +46,8 @@
     },
     {
       "path": "draft-models/models.json",
-      "bytes": 2910,
-      "sha256": "653d16fff10b8fed462a620c451d501f3246d2114b4e7b52bf4e78e2938832d3",
+      "bytes": 3077,
+      "sha256": "b6ced3ca2b9f80747ca0559e58c999027d72ac54a320a9fb14f0d671d3704310",
       "previousSHA256": null
     },
     {
@@ -82,8 +82,8 @@
     },
     {
       "path": "draft-models/provenance/breeze-media-console.json",
-      "bytes": 1390,
-      "sha256": "ae30bba5ab5e2adccd06f0c63c03fe01b8c90e2af499fe223c49569156c2a2ac",
+      "bytes": 1652,
+      "sha256": "7ce0487e1e62596e5e2afc6f863920ba45ef82d8f5dd6bfa01dd549abc8cbe61",
       "previousSHA256": null
     },
     {
@@ -118,8 +118,8 @@
     },
     {
       "path": "draft-products/draft-products-registry.js",
-      "bytes": 1321,
-      "sha256": "c6e3ae9cd787d2da9038bb8299c44fc63119808c0912dfb51c973f5d4643b8fb",
+      "bytes": 1340,
+      "sha256": "3dfdc304ff6a0be2df0eb9d736a773921b3be8060953303699d8af5260e92d5f",
       "previousSHA256": null
     },
     {
@@ -142,8 +142,8 @@
     },
     {
       "path": "runtime-manifest.json",
-      "bytes": 278745,
-      "sha256": "3e5c542ec9c021a0940f59d41fc69e5f2e63507d57136b1f3190360a7a1becd4",
+      "bytes": 278898,
+      "sha256": "154b72612078fb887900b0d6d7388dee5d95fb4949d0e6e7ace827e0791f2e36",
       "previousSHA256": "ba5177453939671b60b3fc9dcff423f035da307afa885162e164cd90e25ba258"
     },
     {
