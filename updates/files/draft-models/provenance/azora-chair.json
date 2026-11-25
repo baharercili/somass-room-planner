@@ -1,0 +1,30 @@
+{
+  "id": "azora-chair",
+  "sourceDwgSHA256": "edda26a4cb2c788194af72741467249d98e9bbd7d3d99bc617fc5ff50b8bfc96",
+  "sourceOriginalPreserved": true,
+  "officialProduct": false,
+  "status": "source-ready",
+  "nativeBodyCount": 24,
+  "nativeFaceCount": 684,
+  "convertedFaceCount": 0,
+  "modelAssetPath": null,
+  "modelSHA256": null,
+  "previewAssetPath": "draft-models/previews/azora-chair.png",
+  "previewSHA256": "68c6febac18d2336e544daa410f647aebe7e7ecd4fda2a9bf19760e1b9e0c755",
+  "provenanceAssetPath": "draft-models/provenance/azora-chair.json",
+  "dimensionsCm": null,
+  "format": "somass-draft-dwg-provenance-v1",
+  "sourceLabel": "Azora Tekli Berjer 3D NK-5.dwg",
+  "displayCoordinates": null,
+  "geometryScaled": false,
+  "sourcePartsReassembled": false,
+  "sourcePosePreserved": null,
+  "missingNativeFaces": 684,
+  "materialFinishVerified": false,
+  "rawDwgIncluded": false,
+  "hasSourceColors": false,
+  "limitations": [
+    "Original embedded DWG thumbnail only.",
+    "Curved trim records require a compatible CAD export before interactive 3D can be shown."
+  ]
+}

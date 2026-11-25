@@ -39,27 +39,99 @@
       "previousSHA256": null
     },
     {
+      "path": "draft-models/index.html",
+      "bytes": 2805,
+      "sha256": "f856941763f082c64d43b3934b2deaa11d5e1f5230f046ae7c670bdbdb5b7a56",
+      "previousSHA256": null
+    },
+    {
+      "path": "draft-models/models.json",
+      "bytes": 1962,
+      "sha256": "2588a022e89fa4018a95f281ecc361d757972adc31a9a2fa9f39ce49e0fb5c42",
+      "previousSHA256": null
+    },
+    {
+      "path": "draft-models/models/fluted-sideboard.glb",
+      "bytes": 1693760,
+      "sha256": "c9a3dd6805d70cc24d20e24e1629ec9dbca57ea402328aba993de3b87592ef8e",
+      "previousSHA256": null
+    },
+    {
+      "path": "draft-models/previews/azora-chair.png",
+      "bytes": 2330,
+      "sha256": "68c6febac18d2336e544daa410f647aebe7e7ecd4fda2a9bf19760e1b9e0c755",
+      "previousSHA256": null
+    },
+    {
+      "path": "draft-models/previews/fluted-sideboard.png",
+      "bytes": 108959,
+      "sha256": "ce0e6652909c83bbe2c59e18c15674930c52143c9a35fd677a5d63af64492a54",
+      "previousSHA256": null
+    },
+    {
+      "path": "draft-models/provenance/azora-chair.json",
+      "bytes": 1078,
+      "sha256": "6da0ea066fa91023ecc0e9cf5727e5a3b29a6959804a1e383beb4f2e55100261",
+      "previousSHA256": null
+    },
+    {
+      "path": "draft-models/provenance/fluted-sideboard.json",
+      "bytes": 1470,
+      "sha256": "d566ecd16483163c6d1331ca4aa2ce27eaf7cfb530f1e3b5f3ea5f60c025a2df",
+      "previousSHA256": null
+    },
+    {
+      "path": "draft-models/vendor/GLTFLoader.js",
+      "bytes": 96550,
+      "sha256": "5c15967ba830918a9caea6338712c994c354bccd4edc4569bde411c3ec06a3e6",
+      "previousSHA256": null
+    },
+    {
+      "path": "draft-models/vendor/THREE-LICENSE.txt",
+      "bytes": 1081,
+      "sha256": "852e0e8699169bf9f6fdc6bda3e682d078dcbc738b5d33e74df594721bff271d",
+      "previousSHA256": null
+    },
+    {
+      "path": "draft-models/viewer.css",
+      "bytes": 4153,
+      "sha256": "591c47d56114bbd49ee1330ee1689a23465e7d61ac0558a6587a17b051ee810b",
+      "previousSHA256": null
+    },
+    {
+      "path": "draft-models/viewer.js",
+      "bytes": 13958,
+      "sha256": "ac23955c596607aab9e321d5f3c1d230cfde8156ae180e6003350fa9123d6092",
+      "previousSHA256": null
+    },
+    {
+      "path": "draft-products/draft-products-registry.js",
+      "bytes": 1033,
+      "sha256": "f49e8942b96c133f293353b55333f22b8b860fe5d1de36f5e03c70f37e6d789e",
+      "previousSHA256": null
+    },
+    {
       "path": "draft-products/draft-products.css",
-      "bytes": 4081,
-      "sha256": "65d0d49ef28b6a88eb745492f09a249852472101da74866f8551d98a509f6661",
+      "bytes": 6346,
+      "sha256": "433410f574d2dfd755fc9ba0196f3b3be838273cbfc5bb7c9d564e16822beff6",
       "previousSHA256": null
     },
     {
       "path": "draft-products/draft-products.js",
-      "bytes": 8292,
-      "sha256": "0b7e8bf1a9d12ab0552abe3bead7d635098daf7bc22584f18a8ae6b9b84789a3",
+      "bytes": 12073,
+      "sha256": "e842ab925cf31631d485daf324dd4f91de2c6d58dc2b2d00984e332c13e59731",
       "previousSHA256": null
     },
     {
       "path": "index.html",
-      "bytes": 3529388,
-      "sha256": "b4b3481a58073d3b13697055d6cbc7250329067b9f4f56fcf1ab917a72019f78",
+      "bytes": 3529496,
+      "sha256": "114b83c9dbd1eebb22a1bb60696c17fddde30386ce49883a688137c791b07c7b",
       "previousSHA256": "6e5327381919138fd851a0c426632b38e665525c9cf0f73eb1e81014b3ac7e0b"
     },
     {
       "path": "runtime-manifest.json",
-      "bytes": 273833,
-      "sha256": "8148cb3cb10193a56da54c2c7037ed01a4ec1dd50ba38fed6d36e599960b98c7",
+      "bytes": 277591,
+      "sha256": "44ffd08043bfaa7ddce1719ae238331c0e257d0789084290528a4168df45d5ed",
       "previousSHA256": "ba5177453939671b60b3fc9dcff423f035da307afa885162e164cd90e25ba258"
     },
     {
@@ -168,6 +240,18 @@
     "assets/js-def52ad42fbd65e9bc374742ab1e0f47207ff523ae304db7448a0c25bded1a04.js",
     "cloud-customers/customer-cloud-config.js",
     "cloud-customers/vendor/supabase.js",
+    "draft-models/index.html",
+    "draft-models/models.json",
+    "draft-models/models/fluted-sideboard.glb",
+    "draft-models/previews/azora-chair.png",
+    "draft-models/previews/fluted-sideboard.png",
+    "draft-models/provenance/azora-chair.json",
+    "draft-models/provenance/fluted-sideboard.json",
+    "draft-models/vendor/GLTFLoader.js",
+    "draft-models/vendor/THREE-LICENSE.txt",
+    "draft-models/viewer.css",
+    "draft-models/viewer.js",
+    "draft-products/draft-products-registry.js",
     "draft-products/draft-products.css",
     "draft-products/draft-products.js",
     "index.html",

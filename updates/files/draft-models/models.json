@@ -1,0 +1,49 @@
+{
+  "format": "somass-draft-dwg-models-v1",
+  "models": [
+    {
+      "id": "fluted-sideboard",
+      "name": "Fluted Konsol",
+      "sourceLabel": "So Mass Fluted Sideboard 3D.dwg",
+      "sourceSHA256": "3a76fe67c995bb1fa696f8efb066229e27acbf8ab29884a922459c7cdad34129",
+      "status": "ready",
+      "modelURL": "models/fluted-sideboard.glb",
+      "previewURL": "previews/fluted-sideboard.png",
+      "dimensionsCm": {
+        "width": 160,
+        "depth": 45,
+        "height": 75
+      },
+      "materialStatus": "Kaplama henüz seçilmedi",
+      "hasSourceColors": true,
+      "note": "Özgün DWG çizimindeki 37 parça ve 620 yüzey aktarıldı. Kaplama henüz seçilmedi; nötr görünüm ile formu inceleyebilirsiniz.",
+      "sourceDwgSHA256": "3a76fe67c995bb1fa696f8efb066229e27acbf8ab29884a922459c7cdad34129",
+      "sourceOriginalPreserved": true,
+      "officialProduct": false,
+      "nativeBodyCount": 37,
+      "nativeFaceCount": 620,
+      "convertedFaceCount": 620,
+      "provenanceURL": "provenance/fluted-sideboard.json"
+    },
+    {
+      "id": "azora-chair",
+      "name": "Azora Berjer",
+      "sourceLabel": "Azora Tekli Berjer 3D NK-5.dwg",
+      "sourceSHA256": "edda26a4cb2c788194af72741467249d98e9bbd7d3d99bc617fc5ff50b8bfc96",
+      "status": "source-ready",
+      "modelURL": null,
+      "previewURL": "previews/azora-chair.png",
+      "dimensionsCm": null,
+      "materialStatus": "Kaplama henüz seçilmedi",
+      "hasSourceColors": false,
+      "note": "DWG içindeki özgün önizleme gösteriliyor. Eğrisel parçaların eksiksiz 3B aktarımı henüz tamamlanmadı. Kaplama ve döşeme seçilmedi.",
+      "sourceDwgSHA256": "edda26a4cb2c788194af72741467249d98e9bbd7d3d99bc617fc5ff50b8bfc96",
+      "sourceOriginalPreserved": true,
+      "officialProduct": false,
+      "nativeBodyCount": 24,
+      "nativeFaceCount": 684,
+      "convertedFaceCount": 0,
+      "provenanceURL": "provenance/azora-chair.json"
+    }
+  ]
+}

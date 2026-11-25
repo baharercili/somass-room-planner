@@ -14,12 +14,29 @@
     if (!header || !roomPanel) return null;
 
     const oldLink = root.querySelector('a[href*="watkins-konsol/"]');
-    let previewURL;
-    try {
-      previewURL = new URL(options.previewURL || (oldLink && oldLink.getAttribute('href')) || 'watkins-konsol/', document.baseURI);
-      if (!/^https?:$/.test(previewURL.protocol) || previewURL.origin !== new URL(document.baseURI).origin) return null;
-      previewURL.searchParams.set('embed', '1');
-    } catch (_) { return null; }
+    function safePreviewURL(value) {
+      if (typeof value !== 'string' || !value.trim()) return null;
+      try {
+        const url = new URL(value, document.baseURI);
+        if (!/^https?:$/.test(url.protocol) || url.origin !== new URL(document.baseURI).origin) return null;
+        url.searchParams.set('embed', '1');
+        return url.href;
+      } catch (_) { return null; }
+    }
+    const watkinsURL = safePreviewURL(options.previewURL || (oldLink && oldLink.getAttribute('href')) || 'watkins-konsol/');
+    if (!watkinsURL) return null;
+    const legacy = {id: 'watkins-console160', title: 'Watkins Konsol 160', collection: 'WATKINS KOLEKSİYONU', description: '160 × 45 × 72,2 cm', materialStatus: 'Natürel Meşe / Koyu Meşe', previewURL: watkinsURL};
+    const registry = Array.isArray(global.SomassDraftProductsRegistry) && global.SomassDraftProductsRegistry.length ? global.SomassDraftProductsRegistry : [legacy];
+    const knownIds = new Set();
+    const products = registry.flatMap(entry => {
+      if (!entry || !/^[a-z0-9-]{1,80}$/.test(entry.id) || knownIds.has(entry.id)) return [];
+      const previewURL = entry.id === legacy.id ? watkinsURL : safePreviewURL(entry.previewURL);
+      if (!previewURL) return [];
+      knownIds.add(entry.id);
+      return [{id: entry.id, title: String(entry.title || 'Taslak ürün'), collection: String(entry.collection || 'TASLAK'), description: String(entry.description || ''), materialStatus: String(entry.materialStatus || ''), previewURL}];
+    });
+    if (!products.length) return null;
+    let selected = products.find(product => product.id === legacy.id) || products[0];
 
     function node(tag, className, text) {
       const element = document.createElement(tag);
@@ -62,14 +79,40 @@
     draftTab.setAttribute('aria-controls', panel.id);
     const introduction = node('div', 'sp-draft-introduction');
     introduction.appendChild(node('h1', '', 'Taslak ürünler'));
-    introduction.appendChild(node('p', '', 'Yeni tasarımları renkleri ve farklı açılardan inceleyin.'));
+    introduction.appendChild(node('p', '', 'Bir ürün seçerek taslağı farklı açılardan inceleyin.'));
     panel.appendChild(introduction);
 
+    const library = node('div', 'sp-draft-library');
+    const selector = node('nav', 'sp-draft-selector');
+    selector.setAttribute('aria-label', 'Taslak ürün seçimi');
+    const productButtons = [];
+    products.forEach((entry, index) => {
+      const button = node('button', 'sp-draft-choice');
+      button.type = 'button';
+      button.setAttribute('aria-controls', 'sp-draft-current-product');
+      button.appendChild(node('span', 'sp-draft-choice-number', String(index + 1).padStart(2, '0')));
+      const text = node('span', 'sp-draft-choice-text');
+      text.appendChild(node('strong', '', entry.title));
+      text.appendChild(node('span', '', entry.description));
+      text.appendChild(node('small', '', entry.materialStatus));
+      button.appendChild(text);
+      button.addEventListener('click', () => selectProduct(entry.id, false));
+      productButtons.push({button: button, id: entry.id});
+      selector.appendChild(button);
+    });
+    library.appendChild(selector);
     const product = node('article', 'sp-draft-product');
+    product.id = 'sp-draft-current-product';
+    product.setAttribute('aria-labelledby', 'sp-draft-current-title');
     const productHeader = node('header', 'sp-draft-product-heading');
     const productTitle = node('div');
-    productTitle.appendChild(node('p', 'sp-draft-collection', 'WATKINS KOLEKSİYONU'));
-    productTitle.appendChild(node('h2', '', 'Watkins Konsol 160'));
+    const collection = node('p', 'sp-draft-collection');
+    const title = node('h2');
+    title.id = 'sp-draft-current-title';
+    productTitle.appendChild(collection);
+    productTitle.appendChild(title);
+    const materialStatus = node('p', 'sp-draft-material-status');
+    productTitle.appendChild(materialStatus);
     productHeader.appendChild(productTitle);
     productHeader.appendChild(node('span', 'sp-draft-badge', 'Taslak'));
     product.appendChild(productHeader);
@@ -79,12 +122,25 @@
     loading.hidden = true;
     stage.appendChild(loading);
     product.appendChild(stage);
-    panel.appendChild(product);
+    library.appendChild(product);
+    panel.appendChild(library);
 
     header.insertBefore(tabs, header.querySelector('.sp-roomtabs'));
     header.insertAdjacentElement('afterend', panel);
     let view = 'room', iframe = null, restore3D = false, destroyed = false;
 
+    function syncProduct() {
+      product.setAttribute('data-draft-id', selected.id);
+      collection.textContent = selected.collection;
+      title.textContent = selected.title;
+      materialStatus.textContent = selected.materialStatus;
+      materialStatus.hidden = !selected.materialStatus;
+      productButtons.forEach(item => {
+        const active = item.id === selected.id;
+        item.button.setAttribute('aria-pressed', String(active));
+        item.button.className = 'sp-draft-choice' + (active ? ' is-active' : '');
+      });
+    }
     function syncTabs() {
       roomTab.setAttribute('aria-selected', String(view === 'room'));
       draftTab.setAttribute('aria-selected', String(view === 'drafts'));
@@ -99,8 +155,8 @@
       loading.hidden = false;
       stage.setAttribute('aria-busy', 'true');
       iframe = node('iframe', 'sp-draft-preview-frame');
-      iframe.title = 'Watkins Konsol 160 · renk ve 3B önizleme';
-      iframe.src = previewURL.href;
+      iframe.title = selected.title + ' · 3B önizleme';
+      iframe.src = selected.previewURL;
       iframe.referrerPolicy = 'same-origin';
       const current = iframe;
       iframe.addEventListener('load', function () {
@@ -140,7 +196,23 @@
     }
     function clickRoom() { activate('room'); }
     function clickDrafts() { activate('drafts'); }
-    function activateLink(event) { event.preventDefault(); activate('drafts', true); }
+    function selectProduct(id, focus) {
+      if (destroyed) return false;
+      const next = products.find(entry => entry.id === id);
+      if (!next) return false;
+      const changed = next.id !== selected.id;
+      selected = next;
+      syncProduct();
+      if (view !== 'drafts') activate('drafts');
+      else if (changed) { removePreview(); createPreview(); }
+      if (focus) productButtons.find(item => item.id === selected.id).button.focus({preventScroll: true});
+      return true;
+    }
+    function activateLink(event) {
+      event.preventDefault();
+      selectProduct(legacy.id, false);
+      activate('drafts', true);
+    }
     function keyboard(event) {
       if (![roomTab, draftTab].includes(event.target)) return;
       if (event.altKey || event.ctrlKey || event.metaKey) return;
@@ -161,11 +233,14 @@
       oldLink.textContent = 'Watkins Konsol 160';
       oldLink.addEventListener('click', activateLink);
     }
+    syncProduct();
     syncTabs();
 
     const api = {
       activate: next => activate(next, true),
       getActive: () => view,
+      select: id => selectProduct(id, true),
+      getSelected: () => selected.id,
       destroy: function () {
         if (destroyed) return;
         activate('room');

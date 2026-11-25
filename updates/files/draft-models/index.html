@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="tr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>SO-MASS · Taslak ürün</title><link rel="stylesheet" href="viewer.css?v=20261125dwg1"></head><body>
+<header class="page-header"><a class="brand" href="../">SO—MASS<span>TASLAK ÜRÜNLER</span></a><a class="back" href="../">Oda planlayıcı</a></header>
+<main>
+  <aside class="product-info">
+    <p class="eyebrow">TASLAK ÜRÜN</p><h1 id="product-name">Taslak hazırlanıyor</h1>
+    <p id="product-source" class="source"></p>
+    <dl id="dimensions" class="dimensions" hidden><div><dt>Genişlik</dt><dd id="dimension-width"></dd></div><div><dt>Derinlik</dt><dd id="dimension-depth"></dd></div><div><dt>Yükseklik</dt><dd id="dimension-height"></dd></div></dl>
+    <p id="material-status" class="material-status">Kaplama henüz seçilmedi</p>
+    <fieldset id="appearance" disabled><legend>İnceleme görünümü</legend><button type="button" data-appearance="neutral" class="is-active" aria-pressed="true">Nötr görünüm</button><button type="button" data-appearance="source" aria-pressed="false">DWG renkleri</button></fieldset>
+    <p class="hint">Sürükleyerek döndürün, tekerlek ile yakınlaşın. Klavyede yön tuşlarını ve + / − tuşlarını kullanabilirsiniz.</p>
+    <p id="product-note" class="note"></p>
+    <a id="model-download" class="download" download hidden>3B modeli indir <span>GLB ↓</span></a>
+  </aside>
+  <section class="stage" aria-label="Taslak ürünün üç boyutlu önizlemesi">
+    <div id="viewport" aria-busy="true"><img id="preview" alt="" hidden><canvas aria-label="Döndürülebilir taslak ürün modeli" tabindex="0" hidden></canvas><p id="stage-message" class="stage-message" role="status">Önizleme hazırlanıyor…</p></div>
+    <div class="view-bar"><div role="group" aria-label="Görünüş"><button type="button" data-view="perspective" class="is-active" aria-pressed="true" disabled>Perspektif</button><button type="button" data-view="front" aria-pressed="false" disabled>Önden</button><button type="button" data-view="side" aria-pressed="false" disabled>Yandan</button><button type="button" data-view="top" aria-pressed="false" disabled>Üstten</button></div><div class="zoom"><button type="button" id="zoom-out" aria-label="Uzaklaştır" disabled>−</button><button type="button" id="zoom-in" aria-label="Yakınlaştır" disabled>+</button><button type="button" id="fit" disabled>Sığdır</button></div></div>
+    <div class="caption"><span id="view-label">Nötr görünüm</span><span>Kaynak çizimden taslak</span></div>
+  </section>
+</main>
+<script src="../watkins-konsol/three.min.js"></script><script src="vendor/GLTFLoader.js"></script><script src="viewer.js?v=20261125dwg1"></script>
+</body></html>

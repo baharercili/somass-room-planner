@@ -1,0 +1,37 @@
+{
+  "id": "fluted-sideboard",
+  "sourceDwgSHA256": "3a76fe67c995bb1fa696f8efb066229e27acbf8ab29884a922459c7cdad34129",
+  "sourceOriginalPreserved": true,
+  "officialProduct": false,
+  "status": "ready",
+  "nativeBodyCount": 37,
+  "nativeFaceCount": 620,
+  "convertedFaceCount": 620,
+  "modelAssetPath": "draft-models/models/fluted-sideboard.glb",
+  "modelSHA256": "c9a3dd6805d70cc24d20e24e1629ec9dbca57ea402328aba993de3b87592ef8e",
+  "previewAssetPath": "draft-models/previews/fluted-sideboard.png",
+  "previewSHA256": "ce0e6652909c83bbe2c59e18c15674930c52143c9a35fd677a5d63af64492a54",
+  "provenanceAssetPath": "draft-models/provenance/fluted-sideboard.json",
+  "dimensionsCm": {
+    "width": 160,
+    "depth": 45,
+    "height": 75
+  },
+  "format": "somass-draft-dwg-provenance-v1",
+  "sourceLabel": "So Mass Fluted Sideboard 3D.dwg",
+  "displayCoordinates": "Y-up, metres",
+  "geometryScaled": false,
+  "sourcePartsReassembled": false,
+  "sourcePosePreserved": true,
+  "missingNativeFaces": 0,
+  "materialFinishVerified": false,
+  "rawDwgIncluded": false,
+  "hasSourceColors": true,
+  "limitations": [
+    "Display tessellation; not a manufacturing CAD export.",
+    "Some display seams remain; all source faces represented."
+  ],
+  "surfaceNormals": "Per-vertex analytical native surface normals; hard face splits retained",
+  "normalCorrectionPositionsByteExact": true,
+  "positionPayloadSHA256": "174f353489b7f92d55194ae67718bc992e636b60ef7f8391a30fb13b098243ba"
+}
