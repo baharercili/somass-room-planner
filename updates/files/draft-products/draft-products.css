@@ -1,0 +1,124 @@
+/* Keep the room DOM in place while presenting a separate draft workspace. */
+#somass-planner-v2 .sp-workspace-tabs {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  margin-right: auto;
+  padding: 4px;
+  border: 1px solid var(--sp-line, #d8d5ca);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, .45);
+}
+#somass-planner-v2 .sp-workspace-tabs .sp-workspace-tab {
+  min-height: 40px;
+  padding: 9px 15px;
+  border: 0;
+  border-radius: 5px;
+  background: transparent;
+  color: var(--sp-muted, #6d766c);
+  font: inherit;
+  font-size: 13px;
+  cursor: pointer;
+  white-space: nowrap;
+}
+#somass-planner-v2 .sp-workspace-tabs .sp-workspace-tab[aria-selected="true"] {
+  background: var(--sp-text, #2d3c32);
+  color: #fff;
+}
+#somass-planner-v2 .sp-workspace-tab:focus-visible,
+#somass-planner-v2 .sp-draft-products:focus-visible {
+  outline: 2px solid var(--sp-text, #2d3c32);
+  outline-offset: 3px;
+}
+#somass-planner-v2[data-sp-workspace-view="drafts"] > :not(.sp-top):not(.sp-draft-products):not(script):not(style),
+#somass-planner-v2[data-sp-workspace-view="drafts"] .sp-top > .sp-roomtabs {
+  display: none !important;
+}
+#somass-planner-v2 .sp-draft-products[hidden],
+#somass-planner-v2 .sp-draft-products [hidden] {
+  display: none !important;
+}
+#somass-planner-v2 .sp-draft-products { padding: 22px 0 30px; }
+#somass-planner-v2 .sp-draft-introduction { margin-bottom: 22px; }
+#somass-planner-v2 .sp-draft-introduction h1 {
+  margin: 0 0 7px;
+  color: var(--sp-text, #2d3c32);
+  font-family: var(--sp-editorial-serif, Georgia, serif);
+  font-size: clamp(27px, 3vw, 36px);
+  font-weight: 400;
+  line-height: 1.2;
+}
+#somass-planner-v2 .sp-draft-introduction p {
+  margin: 0;
+  color: var(--sp-muted, #6d766c);
+  font-size: 14px;
+  line-height: 1.6;
+}
+#somass-planner-v2 .sp-draft-product {
+  overflow: hidden;
+  border: 1px solid var(--sp-line, #d8d5ca);
+  border-radius: 12px;
+  background: #fff;
+}
+#somass-planner-v2 .sp-draft-product-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 20px 26px;
+  border-bottom: 1px solid var(--sp-line, #d8d5ca);
+}
+#somass-planner-v2 .sp-draft-collection {
+  margin: 0 0 6px;
+  color: var(--sp-muted, #6d766c);
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: .14em;
+}
+#somass-planner-v2 .sp-draft-product-heading h2 {
+  margin: 0;
+  color: var(--sp-text, #2d3c32);
+  font-size: 20px;
+  font-weight: 500;
+}
+#somass-planner-v2 .sp-draft-badge {
+  padding: 7px 12px;
+  border-radius: 999px;
+  background: #eeeadd;
+  color: #655e4a;
+  font-size: 12px;
+  white-space: nowrap;
+}
+#somass-planner-v2 .sp-draft-preview { position: relative; min-height: 680px; background: #f4f2ed; }
+#somass-planner-v2 .sp-draft-preview-frame { display: block; width: 100%; height: 740px; border: 0; background: #f4f2ed; }
+#somass-planner-v2 .sp-draft-loading {
+  position: absolute;
+  z-index: 1;
+  left: 24px;
+  top: 18px;
+  margin: 0;
+  padding: 10px 14px;
+  border-radius: 6px;
+  background: #fff;
+  color: var(--sp-muted, #6d766c);
+  font-size: 13px;
+  pointer-events: none;
+}
+@media (max-width: 1000px) {
+  #somass-planner-v2 .sp-top { flex-wrap: wrap; }
+  #somass-planner-v2 .sp-workspace-tabs { margin-left: auto; margin-right: 0; }
+}
+@media (max-width: 760px) {
+  #somass-planner-v2 .sp-workspace-tabs { width: fit-content; max-width: 100%; margin: 14px 0 8px; }
+  #somass-planner-v2 .sp-workspace-tabs .sp-workspace-tab { padding: 10px 13px; }
+  #somass-planner-v2 .sp-draft-products { padding-top: 16px; }
+  #somass-planner-v2 .sp-draft-introduction { margin-bottom: 16px; }
+  #somass-planner-v2 .sp-draft-product-heading { padding: 17px; }
+  #somass-planner-v2 .sp-draft-product-heading h2 { font-size: 18px; }
+  #somass-planner-v2 .sp-draft-preview { min-height: 1050px; }
+  #somass-planner-v2 .sp-draft-preview-frame { height: 1150px; }
+}
+@media print {
+  #somass-planner-v2 .sp-workspace-tabs,
+  #somass-planner-v2 .sp-draft-products { display: none !important; }
+}

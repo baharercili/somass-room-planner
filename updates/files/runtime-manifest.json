@@ -2,8 +2,8 @@
   "format": "somass-room-pages-runtime-v1",
   "publicPrefix": "/somass-room-planner/",
   "sourceTreeSHA256": "e293e30df2e8df696408ef63f188e4a5676893b8acc34fd6f3b01e8110f6aa67",
-  "exportTreeSHA256ExcludingManifest": "239cbe685b8c3c15ad9e706ff12655b92510ff1e8087f432537e90aef3e71f56",
-  "filesExcludingManifest": 1282,
+  "exportTreeSHA256ExcludingManifest": "84280831dd085e37469895b2c1bbd186f3c9100ba59d4603a9b43e14aa9ba4e8",
+  "filesExcludingManifest": 1284,
   "geometryOrTextureContentChanged": true,
   "productGeometryOrTextureContentChanged": true,
   "exportOnlyChanges": [
@@ -110,7 +110,7 @@
   },
   "verification": {
     "pass": true,
-    "localReferenceOccurrences": 2649,
+    "localReferenceOccurrences": 2654,
     "missingReferences": [],
     "crossRootRuntimeReferences": [],
     "redirects": [
@@ -4978,9 +4978,19 @@
       "sha256": "2985f6545b4672a9bc29bed7eb1ffc2208d1bd3da8d136119729550cfdea3010"
     },
     {
+      "path": "draft-products/draft-products.css",
+      "bytes": 3966,
+      "sha256": "b83ae6b5a76e029d981fb186b4ba56f3a61c796ecc276357615c15d91d754ffa"
+    },
+    {
+      "path": "draft-products/draft-products.js",
+      "bytes": 8117,
+      "sha256": "1aeebd42dc604904395ff47242ab790b3dc5db9da1cd01531b0f7b9aeafc582c"
+    },
+    {
       "path": "index.html",
-      "bytes": 3529049,
-      "sha256": "b93c015daebdd8ea5dc4b41583d8ebf3332dce472298788576c618b3d5523e37"
+      "bytes": 3529364,
+      "sha256": "d5b0ed8282fe42d60b2198e54c77738c91561d286cb8dc26f1e9028e3f2b0a32"
     },
     {
       "path": "malzeme-studyosu.html",
@@ -6149,8 +6159,8 @@
     },
     {
       "path": "watkins-konsol/index.html",
-      "bytes": 2674,
-      "sha256": "e75219e98b42c090a14c07151064d2806a6dee0399d3f18d78b81179fbf16524"
+      "bytes": 2805,
+      "sha256": "731264e9d9174daf215744390de4c5c4cf73f3f24498262edf3e2cbea3615197"
     },
     {
       "path": "watkins-konsol/materials.js",
@@ -6169,13 +6179,13 @@
     },
     {
       "path": "watkins-konsol/preview.css",
-      "bytes": 4118,
-      "sha256": "5b0bdcbdb2347c4841aca4687ffa1edc976e8f31dfc7f5d947cf1c8c77baa4d1"
+      "bytes": 5036,
+      "sha256": "4ffb3ab7d0a26f3ad9b6cc072c1ef1c99a48f2dbe16def14909e4d1f0e201bda"
     },
     {
       "path": "watkins-konsol/preview.js",
-      "bytes": 8232,
-      "sha256": "9be5100e0f9a4f486ac165c398240403b92e8c5ab794193318fced8264629162"
+      "bytes": 8294,
+      "sha256": "54c8e5cb476c21952533eac9de8f34194fa57baaf67121ac5e312e208cd8c17c"
     },
     {
       "path": "watkins-konsol/studio-environment.js",
@@ -6538,7 +6548,7 @@
       "sha256": "f9d4da472d21998f41f679aeffd43c51d550c320e6c977d8af40f82383ed12be"
     }
   ],
-  "applicationRevision": "shared-room-customers-20261124-v1",
+  "applicationRevision": "draft-products-inline-20261125-v1",
   "customerWorkspaces": {
     "provider": "supabase",
     "mode": "shared",
@@ -6659,5 +6669,14 @@
     "pollingPausesWhenPageHidden": true,
     "migrationSHA256": "a2debd7dcede617a8d10089702a6fe34826a50097d3891290f4586a5e2c51c4e",
     "liveEndToEndAnonymousSavePending": true
+  },
+  "draftProducts": {
+    "inlinePreview": true,
+    "lazyLoad": true,
+    "productKeys": [
+      "WATKINS_CONSOLE160_DERIVED"
+    ],
+    "officialCatalogChanged": false,
+    "customerDataIncludedInBuild": false
   }
 }
