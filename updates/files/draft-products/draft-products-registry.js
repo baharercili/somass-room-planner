@@ -30,7 +30,7 @@
       id: 'breeze-media-console',
       title: 'Breeze Medya-Konsol',
       collection: 'YENİ TASLAK',
-      description: 'Breeze Medya-Konsol',
+      description: '182,4 cm genişlik · 41,2 cm derinlik',
       materialStatus: 'Kaplama henüz seçilmedi',
       previewURL: 'draft-models/?product=breeze-media-console'
     })
