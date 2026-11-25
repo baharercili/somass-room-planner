@@ -44,6 +44,26 @@
       "nativeFaceCount": 684,
       "convertedFaceCount": 0,
       "provenanceURL": "provenance/azora-chair.json"
+    },
+    {
+      "id": "breeze-media-console",
+      "sourceDwgSHA256": "72db9ea66b8a74eac7172bf94099011822ff8ebbcc715c56737c012385e865c2",
+      "sourceOriginalPreserved": true,
+      "officialProduct": false,
+      "status": "source-ready",
+      "nativeBodyCount": 112,
+      "nativeFaceCount": 7050,
+      "convertedFaceCount": 0,
+      "dimensionsCm": null,
+      "name": "Breeze Medya-Konsol",
+      "sourceLabel": "Breeze Medya-Konsol.dwg",
+      "sourceSHA256": "72db9ea66b8a74eac7172bf94099011822ff8ebbcc715c56737c012385e865c2",
+      "modelURL": null,
+      "previewURL": "previews/breeze-media-console.png",
+      "provenanceURL": "provenance/breeze-media-console.json",
+      "materialStatus": "Kaplama henüz seçilmedi",
+      "hasSourceColors": false,
+      "note": "DWG içindeki özgün önizleme gösteriliyor. Eğrisel bağlantı parçalarının eksiksiz 3B aktarımı henüz tamamlanmadı. Ölçü ve kaplama doğrulanmadı."
     }
   ]
 }

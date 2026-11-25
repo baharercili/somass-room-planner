@@ -44,6 +44,20 @@ DRAFT_MODELS = {
         "dimensionsCm": None,
     },
 }
+# Only this optional exact identity may extend the two established drafts.
+# The placed CAD inventory includes all 72 direct solids and 40 hardware INSERTs.
+# Source-ready deliberately permits no partial GLB or guessed physical scale.
+OPTIONAL_DRAFT_MODELS = {
+    "breeze-media-console": {
+        "sourceDwgSHA256": "72db9ea66b8a74eac7172bf94099011822ff8ebbcc715c56737c012385e865c2",
+        "status": "source-ready", "nativeBodyCount": 112, "nativeFaceCount": 7050,
+        "convertedFaceCount": 0, "modelAssetPath": None, "modelSHA256": None,
+        "dimensionsCm": None,
+        "previewAssetPath": DRAFT_PREFIX + "previews/breeze-media-console.png",
+        "previewSHA256": "cea7d289b67d72b0fab2d90cd8cf9d6289a8e4938864bb92b5c82ceb78e95379",
+        "provenanceAssetPath": DRAFT_PREFIX + "provenance/breeze-media-console.json",
+    },
+}
 DRAFT_IDENTITY_FIELDS = (
     "id", "sourceDwgSHA256", "sourceOriginalPreserved", "officialProduct", "status",
     "nativeBodyCount", "nativeFaceCount", "convertedFaceCount", "dimensionsCm",
@@ -211,14 +225,15 @@ def draft_addition_metadata(document):
         return {}, set()
     if document.get("geometryOrTextureContentChanged") is not True or document.get("existingProductGeometryOrTextureContentChanged") is not False or document.get("binaryIntegrity", {}).get("allOriginalBaselineBinaryFilesUnchanged") is not True:
         raise ValueError("Draft additions require an explicit geometry addition and original binary preservation proof")
-    if len(additions) != len(DRAFT_MODELS):
-        raise ValueError("Both registered draft model identities must be explicit")
+    registered = {**DRAFT_MODELS, **OPTIONAL_DRAFT_MODELS}
+    if len(additions) not in (len(DRAFT_MODELS), len(registered)):
+        raise ValueError("The two existing drafts and optional registered Breeze draft must be explicit")
     by_id, paths = {}, {DRAFT_INDEX, DRAFT_LICENSE}
     for addition in additions:
-        if not isinstance(addition, dict) or not isinstance(addition.get("id"), str) or addition["id"] not in DRAFT_MODELS or addition["id"] in by_id:
+        if not isinstance(addition, dict) or not isinstance(addition.get("id"), str) or addition["id"] not in registered or addition["id"] in by_id:
             raise ValueError("Unknown or duplicate draft model identity")
         model_id = addition["id"]
-        for key, value in DRAFT_MODELS[model_id].items():
+        for key, value in registered[model_id].items():
             if key not in addition or addition[key] != value:
                 raise ValueError("Draft source, status, geometry or dimensions differ: " + model_id)
         for key in ("nativeBodyCount", "nativeFaceCount", "convertedFaceCount"):
@@ -237,6 +252,8 @@ def draft_addition_metadata(document):
         if addition["modelAssetPath"] is not None:
             paths.add(addition["modelAssetPath"])
         by_id[model_id] = addition
+    if not set(DRAFT_MODELS).issubset(by_id):
+        raise ValueError("Both existing registered draft identities must remain present")
     return by_id, paths
 
 
@@ -293,7 +310,11 @@ def validate_draft_glb(path, addition):
     if faces != addition["convertedFaceCount"]:
         raise ValueError("Draft GLB converted face count differs")
     bounds = [max(v[i] for v in maxima) - min(v[i] for v in minima) for i in range(3)]
-    if not all(abs(a - b) < 0.00001 for a, b in zip(bounds, (1.6, .75, .45))):
+    dimensions = addition.get("dimensionsCm")
+    if not isinstance(dimensions, dict) or set(dimensions) != {"width", "height", "depth"} or not all(type(v) in (int, float) and math.isfinite(v) and v > 0 for v in dimensions.values()):
+        raise ValueError("Draft GLB requires exact registered product dimensions")
+    expected_bounds = (dimensions["width"] / 100, dimensions["height"] / 100, dimensions["depth"] / 100)
+    if not all(abs(a - b) < 0.00001 for a, b in zip(bounds, expected_bounds)):
         raise ValueError("Draft GLB millimetres-to-metres scale differs")
 
 

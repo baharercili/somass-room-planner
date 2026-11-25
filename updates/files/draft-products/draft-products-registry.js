@@ -25,6 +25,14 @@
       description: 'Azora Berjer',
       materialStatus: 'Kaplama henüz seçilmedi',
       previewURL: 'draft-models/?product=azora-chair'
+    }),
+    Object.freeze({
+      id: 'breeze-media-console',
+      title: 'Breeze Medya-Konsol',
+      collection: 'YENİ TASLAK',
+      description: 'Breeze Medya-Konsol',
+      materialStatus: 'Kaplama henüz seçilmedi',
+      previewURL: 'draft-models/?product=breeze-media-console'
     })
   ]);
 })(typeof window !== 'undefined' ? window : globalThis);

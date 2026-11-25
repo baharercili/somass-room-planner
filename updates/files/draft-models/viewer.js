@@ -4,7 +4,7 @@
   const params = new URLSearchParams(location.search);
   if (params.get('embed') === '1') document.documentElement.classList.add('sp-embedded');
   const id = params.get('product') || 'fluted-sideboard';
-  const allowed = new Set(['fluted-sideboard', 'azora-chair']);
+  const allowed = new Set(['fluted-sideboard', 'azora-chair', 'breeze-media-console']);
   const viewport = $('#viewport'), canvas = $('canvas'), preview = $('#preview'), message = $('#stage-message');
   const abort = new AbortController();
   const listeners = [];

@@ -157,7 +157,7 @@
   #somass-planner-v2 .sp-top { flex-wrap: wrap; }
   #somass-planner-v2 .sp-workspace-tabs { margin-left: auto; margin-right: 0; }
   #somass-planner-v2 .sp-draft-library { grid-template-columns: minmax(0, 1fr); gap: 16px; }
-  #somass-planner-v2 .sp-draft-selector { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  #somass-planner-v2 .sp-draft-selector { grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); }
   #somass-planner-v2 .sp-draft-selector .sp-draft-choice { padding: 14px 12px; }
 }
 @media (max-width: 760px) {
