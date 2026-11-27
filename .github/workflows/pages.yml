@@ -38,6 +38,8 @@ jobs:
         run: python3 room-publish/restore.py --site _site
       - name: Apply verified cumulative application updates
         run: python3 room-publish/apply-updates.py --site _site
+      - name: Verify and add immutable material gallery assets
+        run: python3 room-publish/material-gallery-v179-cfd55e91db46/restore-v179-assets.py --site _site
       - name: Configure Pages
         uses: actions/configure-pages@v5
       - name: Upload the verified static website
